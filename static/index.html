@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Student List</title>
+        <title>AngularJS Controller</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"></script>
         <script src="index.js"></script>
     </head>
-    <body onload="printStudents()">
-        <h2>Students</h2>
-        <div id="main"></div>
+    <body>
+        <h2>AngularJS Sample Application</h2>
+        <div ng-app = "mainApp" ng-controller = "studentController">
+            <table border =1>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tr ng-repeat="student in studentDetails">
+                <td> {{ student.id }}</td>
+                <td> {{ student.name }}</td>
+                </tr>
+        </table>
+        </div>
     </body>
 </html>
