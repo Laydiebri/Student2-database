@@ -23,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/Laydiebri/Student2-database/issues"
   },
-  "homepage": "https://github.com/Laydiebri/Student2-database#readme"
+  "homepage": "https://github.com/Laydiebri/Student2-database#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.2"
+  }
 }
