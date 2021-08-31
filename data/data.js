@@ -1,14 +1,13 @@
 "use strict";
 
 // Import SQLite library.
-// Use verbose mode to give more detailed error outputs
 const sqlite3 = require("sqlite3").verbose();
 
+// The application layer uses student classes
+const student = require("../student.js");
+
 // Connect to the database.
-// Function is callback when connection completed.
-// err is any error message that occurs
-let db = new sqlite3.Database("students.db", function(err) {
-    // If an error, print it out.
+var db = new sqlite3.Database("data/students.db", function(err) {
     if (err) {
         return console.error(err.message);
     }
